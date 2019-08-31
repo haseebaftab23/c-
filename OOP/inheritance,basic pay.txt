@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class emp_add
+		{
+		  private:
+					 char name[15];
+					 float phone;
+		  public:
+					 emp_add(char n[15],int p)
+							  {
+								strcpy(name,n);
+								phone=p;
+							  }
+					 display_data()
+							  {
+								cout<<"Empoly Name :"<<name;
+								cout<<"\nEmpoly Phone # :"<<phone;
+							  }
+		  };
+class EMP_ALNC:public emp_add
+		  {
+			 private:
+						float bp,hr,ma,ca,np;
+			 public:
+						EMP_ALNC(char n[15], float p, float pp):emp_add(n,p)
+							  {
+							   bp=pp;
+							  }
+						DISPLAY_DATA()
+							  {
+								hr=(45*bp)/100;
+								ma=(bp*15)/100;
+								ca=(bp*10)/100;
+								np=bp+hr+ma+ca;
+								cout<<"\nYour House Rent:"<<hr;
+								cout<<"\nYour Med. Alnc. :"<<ma;
+								cout<<"\nYour Conc. Alnc. :"<<ca;
+								cout<<"\nYour Net Pay : "<<np;
+							  }
+		  };
+main()
+	 {
+		  char name1[15];
+		  float phone1;
+		  float bp1;
+				cout<<"Enter Empoly Name :";
+				cin>>name1;
+				cout<<"Enter Empoly Phone # :";
+				cin>>phone1;
+				cout<<"Enter Your BAsic Pay :";
+				cin>>bp1;
+				EMP_ALNC emp(name1,phone1,bp1);
+		  emp.display_data();
+		  emp.DISPLAY_DATA();
+
+	 }

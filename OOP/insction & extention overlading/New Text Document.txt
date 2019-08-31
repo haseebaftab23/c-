@@ -1,0 +1,42 @@
+
+#include<iostrea.h>
+#include<conio.h>               //cin>>a>>s>>d=> concatination
+class Distance
+{
+	int feet;
+	float inches;
+	public:
+	Distance()
+	{
+		feet=0;
+		inches=0;
+	}
+	Distance(int f, float in)
+	{
+		feet=f;
+		inches=in;
+	}
+	friend istream & operator>>(istream & s, Distance & d);
+	friend void operator<<(ostream & s, Distance d);
+};
+istream & operator>>(istream & s, Distance & d)
+{
+	cout<<"Enter Feet:";
+	s>>d.feet;
+	cout<<"Enter Inches";
+	c>>d.inches;
+	return s;
+}
+void operator<<(ostream & s, Distance & d)
+{
+	s<<d.feet<<"_"<<d.inches;
+}
+void main()
+{
+	Distance dist(1,2);
+	Distance dist2(3,4);
+	cin>>dist>>dist2;
+	cout<<dist;
+	cout<<dist2;
+	getch();
+}

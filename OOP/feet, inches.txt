@@ -1,0 +1,50 @@
+#include<conio.h>
+#include<iostream.h>
+class ABC
+{
+private:
+float feet,inches;                             //OBAID-US-SALAM ITM BSCS-B-III
+public:
+ ABC()
+ {
+ feet=inches=0;
+ }
+ABC(float i,float j)       
+{
+feet=i;
+inches=j;
+}
+ABC add(ABC obj)                
+{
+ABC abc;
+float f,i;
+f=obj.feet+feet;            
+i=obj.inches+inches;                   
+cout<<"Feet="<<f<<"\nInches"<<i;
+abc.feet=f;
+abc.inches=i;
+return(abc);
+}
+show()
+{
+cout<<feet<<inches;
+}
+};
+main()
+{
+float a,b,c,d;
+cout<<"Enter 1st Feet Value :";
+cin>>a;
+cout<<"Enter 1st Inches Values :";
+cin>>b;
+ABC obj1(a,b);
+cout<<"Enter 2nd Feet Value :";
+cin>>c;
+cout<<"Enter 2nd Inches Value :";
+cin>>d;
+ABC obj2(c,d);
+ABC obj3;
+obj3=obj1.add(obj2);
+obj3.show();
+
+}

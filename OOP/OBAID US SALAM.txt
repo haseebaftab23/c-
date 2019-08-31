@@ -1,0 +1,77 @@
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+	private:
+
+			 int name;
+			 int phy;
+			 int comp;
+			 int math;
+			 int total;
+			 int avg;
+	public:
+			 getdata(void)
+			  {
+				 cout<<"Enter Your Name :\n";
+				 cin>>name;
+				 cout<<"Enter Your Physics Marks :\n";
+				 cin>>phy;
+				 cout<<"Enter Your Computer Marks :\n";
+				 cin>>comp;
+				 cout<<"Enter Your Mathematics Marks :\n";
+				 cin>>math;
+			  }
+			 totaldata(void)
+			  {
+				total=phy+comp+math;
+				avg=total/3;
+				cout<<"Your Name Is ' "<<name<<" '\n";
+				cout<<"Your Total Marks ="<<total;
+			  }
+			 avgdata(void)
+			  {
+				avg=total/3;
+				cout<<"Your Name Is ' "<<name<<" '\n";
+				cout<<"Your Average ="<<avg;
+			  }
+};
+main()
+{
+	clrscr();
+	student s1;
+	s1.getdata();
+	s1.totaldata();
+	s1.avgdata();
+	getch();
+}
+
+#include<iostream.h>
+#include<conio.h>
+class student
+{
+	private:
+	       int name;
+	       int age;
+	public:
+	       getdata(void)
+	        {
+       		 cout<<"Enter Your Name :\n";
+       		 cin>>name;
+       		 cout<<"Enter Your Age :\n";
+       		 cin>>age;
+	        }
+	       displaydata(void)
+		    {
+    			cout<<"Your Name Is ' "<<name<<" '\n";
+    			cout<<"Mr."<<name<<"Your Age Is '"<<age<<"'\n";
+    		} 
+};
+main()
+{
+	
+	student s1;
+	s1.getdata();
+	s1.displaydata();
+	getch();
+}

@@ -1,0 +1,35 @@
+#include<fstream.h>
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+class country
+{
+int id;
+float code;
+public:
+void get()
+{
+cout<<"enter id";
+cin>>id;
+cout<<"enter code";
+cin>>code;
+}
+void show()
+{
+cout<<"\ncountry id";
+cout<<id;
+cout<<"\ncountry code";
+ cout<<code;
+ }
+ };
+
+ int main()
+ {
+ country obj;
+ ofstream out("country.txt",ios::binary);
+ obj.get();
+ out.write((char*)&obj,sizeof(obj));
+ obj.show();
+ out.close();
+ return 0;
+   }

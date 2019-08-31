@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+int a,b,c;
+cout<<"Enter any no.  = ";
+cin>>a;
+cout<<"Enter the first no. = ";
+cin>>b;
+cout<<"Enter last no. = ";
+cin>>c;
+for(int i=b; i<=c; i++)
+cout<<a<<"x"<<i<<"="<<a*i<<endl;
+getch();
+}

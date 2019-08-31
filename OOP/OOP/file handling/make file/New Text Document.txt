@@ -1,0 +1,35 @@
+//output strem
+#include<iostream.h>                            //IOS operation mode
+#include<conio.h>                                //1: istream     2: ostream    
+#include<fstream.h>                                // iostream
+#include<string>
+#include<stdlib.h>                                   //  types of stream
+using namespace std;                                //  input stream  file----->program
+class entercity                                    //  output stream  program------>file
+{
+	string city;
+	public:
+	void WrirtenInFile()
+	{
+		ofstream file("f:\\r\\city.txt");
+		if(!file)
+		{
+			cout<<"Error";
+			exit(1);
+		}
+		for(int i=0;i<5;i++)
+		{
+			cout<<"Enter City Name :"<<endl;
+			cin>>city;
+			file<<city<<"\n";
+		}
+		file.close();
+	}	
+};
+int main()
+{
+	entercity obj;
+	obj.WrirtenInFile();
+	return 0;
+    getch();
+}

@@ -1,0 +1,33 @@
+                    //OVERLOADING POSTFIX INCREMENT OPERATOR
+                    
+                    
+//Write a program that overloads postfix increment operator to work with user-defined objects.
+
+#include<iostream.h>
+#include<conio.h>
+class postfix
+{
+	private:
+	int n;
+	public:
+	postfix()
+	{
+		n=0;
+	}
+	void display()
+	{
+		cout<<"Number : "<<n<<"\n";
+	}
+	void operator++(int)                 // post_fix increment operator "void operator++(int)"
+	{
+		n+=1;
+	}
+};
+main()
+{
+	postfix i;
+	i.display();
+	i++;
+	i.display();
+	getch();
+}

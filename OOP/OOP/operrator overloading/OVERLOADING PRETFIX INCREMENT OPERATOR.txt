@@ -1,0 +1,33 @@
+                    //OVERLOADING PRETFIX INCREMENT OPERATOR
+                    
+                    
+//Write a program that overloads increment operator to work with user-defined objects.
+
+#include<iostream.h>
+#include<conio.h>
+class prefix
+{
+	private:
+	int inc;
+	public:
+	prefix()
+	{
+		inc=-1;
+	}
+	void display()
+	{
+		cout<<"Number : "<<inc<<"\n";
+	}
+	void operator++()                 // pre_fix increment operator "void operator++(int)"
+	{
+		inc+=1;
+	}
+};
+main()
+{
+	prefix i;
+	i.display();
+	++i;
+	i.display();
+	getch();
+}

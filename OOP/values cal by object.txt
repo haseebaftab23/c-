@@ -1,0 +1,27 @@
+class test
+{
+  private:
+    int a,b;
+  public:
+    test(int i,int j)
+     {
+       a=i;
+       b=j;
+     }
+    void equals(test o)
+     {
+       if(o.a==a && o.b==b)
+         cout<<"Object Are Same";
+       else
+         cout<<"Objects Are Not Same";
+     }
+};
+void main()
+  {
+    test obj1(3,4);
+    tets obj2(4,5);
+    test obj3(3,4);
+    obj1.equals(obj3);
+    obj2.equals(obj3);
+  }
+ 

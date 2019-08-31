@@ -1,0 +1,57 @@
+                    //OVERLOADING RELATIONAL OPERATOR
+                                       
+//Write a program that overloads relational operator to work with user-defined objects.
+
+#include<iostream.h>
+#include<conio.h>
+class relational
+{
+	private:
+	int feet;
+	float inches;
+	public:
+	relational()
+	{
+		feet=0;
+		inches=0;
+	}
+	relational(int f, float i)
+	{
+		feet=f;
+		inches=i;
+	}
+	void display()
+	{
+		cout<<"\nFeet : "<<feet<<"\n";
+		cout<<"Inches : "<<inches<<"\n";
+	}
+	int operator>(relational);                  // greater than operator with "void operator>(class name)"
+};
+int relational::operator>(relational rel)      // similarly less than operator with "void operator<(class name)"
+{                                                   
+		int f1=feet+inches/12;
+		int f2=rel.feet+rel.inches/12;
+		if(f1>f2)
+		{
+ 	       return 1;			
+		}
+        else
+        {
+        	return 0;
+        }		
+}
+main()
+{
+	relational a1(1,2),b1(3,4);
+	a1.display();
+	b1.display();
+	if(a1>b1)
+	{
+		cout<<"\nA is greater :";
+	}
+	else
+	{
+		cout<<"\nB is greater: ";
+	}
+	getch();
+}

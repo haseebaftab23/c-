@@ -1,0 +1,58 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+#include<fstream.h>
+using namespace std;
+void writedata();
+void readdata();
+class person
+{
+private:
+string name;
+int age;
+double NIC;
+public:
+friend istream & operator >>(istream &put,person &obj);
+friend ostream & operator <<(ostream &put,person &obj);
+};
+istream & operator>>(istream &put,person &obj)
+{
+cout<<"Enter your name : ";
+put>>obj.name;
+cout<<"Enter your age : ";
+put>>obj.age;
+cout<<"Enter your NIC # : ";
+put>>obj.NIC;
+return put;	
+}
+ostream & operator<<(ostream &put,person &obj)
+{
+cout<<"\nYour name is : ";
+put<<obj.name;
+cout<<"\nYour age is : ";
+put<<obj.age;
+cout<<"\nYour NIC # is : ";
+put<<obj.NIC;
+}
+void writedata()
+{
+person p;
+ofstream obj("d:\\file\\pdata.dat",ios::out);
+obj.write((char*)&p,sizeof(p));
+obj.close();
+};
+void readdata()
+{
+person p;
+ifstream obj1("d:\\file\\pdata.dat",ios::in);
+obj1.read((char*)&p,sizeof(p));
+obj1.close();
+};
+int main()
+{
+person p2;
+cin>>p2;
+cout<<p2;
+writedata();
+readdata();
+}

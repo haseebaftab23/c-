@@ -1,0 +1,81 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+using namespace std;
+class Employee
+{
+	private:
+	string firstname;
+	string lastname;
+	string SSN;
+	public:
+	Employee(string f, string l, string s)
+	{
+		firstname=f;
+		lastname=l;
+		SSN=s;
+	}
+	virtual void print()
+	{
+		cout<<"The Name Of Employee Is "<<firstname<<" "<<lastname<<"\n";
+		cout<<"The Social Security Number Of Empolyee Is "<<SSN<<"\n";
+	}
+	virtual double earning()=0;         //jst decleare in base class , define in derive class => pure virtual
+};
+class SalariedEmployee:public Employee
+{
+	private:
+	double weeklySalray;
+	public:
+	SalariedEmployee(string, string, string, double=0);   //default constructor double=0; due to default argument jst decleare
+    void print()
+	{
+		Employee::print();
+		cout<<"The Weekly Salary Of Empolyee Is "<<weeklySalray<<"\n";
+	}
+	double earning()
+	{
+		return weeklySalray*4;
+	}
+};
+SalariedEmployee::SalariedEmployee(string f, string l, string s, double w):Employee(f, l, s)
+{
+	weeklySalray=w;
+}
+class HourlyEmployee:public Employee
+{
+	private:
+	double wage;
+	double hours;
+	public:
+	HourlyEmployee(string, string, string, double=0, double=0);
+	void print()
+	{
+        Employee::print();
+		cout<<wage<<"\n";
+		cout<<hours<<"\n";
+	}
+	double earning()
+	{
+		return wage*hours;
+	}	
+};
+HourlyEmployee::HourlyEmployee(string f, string l, string s, double wg, double h):Employee(f,l,s)
+{
+	wage=wg;
+	hours=h;
+}
+main()
+{
+	Employee *eptr [2];
+	SalariedEmployee s("a","s","d",1122);
+	HourlyEmployee h("a", "s","d", 13, 2);
+	eptr[0]=&s;
+	eptr[1]=&h;
+	for(int i=0; i<=1;i++)
+	{
+		eptr[i]->print();
+		cout<<eptr[i]->earning();
+	} 
+	getch();	
+}

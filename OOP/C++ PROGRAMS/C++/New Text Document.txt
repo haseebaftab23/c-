@@ -1,0 +1,9 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+int sec;
+cout<<"Enter The Time in Secnnd=";
+cin>>sec;
+cout<<"Time in 

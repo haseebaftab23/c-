@@ -1,0 +1,17 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+float sec;
+cout<<"Enter The Time In Seconds=";
+cin>>sec;
+cout<<"Your Time In hh-mm-ss=";
+cout<<sec/3600;
+cout<<"hh_";
+cout<<sec/60;
+cout<<"mm_";
+cout<<sec;
+cout<<"sec";
+getch();
+}

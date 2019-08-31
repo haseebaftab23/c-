@@ -1,0 +1,16 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+main()
+{
+clrscr();
+float x;
+a:
+cout<<"Enter The Number =";
+cin>>x;
+float z=floor(x);
+cout<<"The Float Of "<<x<<" Is ="<<z;
+getch();
+clrscr();
+goto a;
+}

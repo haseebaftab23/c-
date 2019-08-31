@@ -1,0 +1,27 @@
+#include<iostream.h>
+#include<conio.h>
+class aclass
+{
+	int alpha;
+	public:
+	void nonfun()
+	{
+		alpha=6;
+	}
+/*	void confun() const 
+	{
+		alpha=7;
+	} */
+	void show() const
+	{
+		cout<<"Alpha Value :"<<alpha;
+	}
+};
+main()
+{
+	aclass a1;
+	a1.nonfun();
+//	a1.confun();
+	a1.show();
+	getch();
+}

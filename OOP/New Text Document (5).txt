@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+#include<string.h>
+class emp
+{
+int no;
+char name[15];
+public:
+{
+emp (int a, char b[])
+{
+no=a;
+strcpy(name,b);
+}
+
+void display()
+{
+cout<<name<<no;
+}
+};
+class add:public emp
+{
+int bp,hr,ca,ma,np;
+public:
+{
+add (int a, char b[], int c)
+c=bp;
+}
+void result()
+{
+hr=bp%100*45;
+ca=bp%100*10;
+ma=bp%100*15;
+np=hr+ca+ma;
+cout<<"your net pay is "<<np;
+}
+};
+main()
+{
+add obj;
+obj(waqas,2,15000);
+obj.display();
+obj.result();
+}
+

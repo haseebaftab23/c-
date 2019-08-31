@@ -1,0 +1,50 @@
+#include<iostream.h>
+#include<conio.h>
+class Distance
+{
+	int feet;
+	float inches;
+	public:
+	Distance()
+	{
+		feet=0;
+		inches=0;
+	}
+	Distance(float flt_feet)
+	{                                           // in casting we can conert the values from one data type to anoter data type
+		feet=(int)(flt_feet);              //casting=>i- explicit(we) & ii-implicit(compiler)
+		inches=12*(flt_feet-feet);
+	}
+	Distance(int f, float i)
+	{
+		feet=f;
+		inches=i;
+	}
+	void show()
+	{
+		cout<<feet<<" : "<<inches<<"\n";
+	}
+	Distance operator+(Distance);
+};
+main()
+{
+	Distance d1(2.5);             // both ways of initializing the constructor are ture, CONSTRUCTOR(VALUE) or CONSTRUCTOR=VALUE      
+	Distance d2=4.5;              // calling of 2nd CONSTRUCTOR
+	Distance d3;                  // calling of 2nd CONSTRUCTOR
+	d1.show();
+	d2.show();
+	d3=d1+10.0;                   // passing of object "d1+10.0" with the reference of object "d3"
+	d3.show();
+	getch();
+}
+Distance Distance::operator+(Distance d)
+{
+	int f=feet+d.feet;
+	int i=inches+d.inches;
+	if(i>12)
+	{
+		i-=12;
+		f++;
+	}
+	return Distance(f,i);             //Name less object, 3rd CONSTRUCTOR calling
+}

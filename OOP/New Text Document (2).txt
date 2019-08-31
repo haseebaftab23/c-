@@ -1,0 +1,66 @@
+#include<iostream.h>
+#include<conio.h>
+#include<math.h>
+ class Area
+	{
+	 private:
+		  float radius,length,width,A,B,C;
+	 public:
+
+				  Area(float r)
+					 {
+					  radius=r;
+					 }
+				  Area(float l, float w)
+					 {
+					  length=l;
+					  width=w;
+					 }
+				  Area(float a, float b, float c)
+					 {
+					  A=a;
+					  B=b;
+					  C=c;
+					 }
+				 circle()
+					 {
+					  cout<<"The Area Of A Circle ="<<radius* radius*3.1415<<"\n";
+					 }
+				 rectangle()
+					 {
+					  cout<<"The Area Of Rectangle ="<<length*width<<"\n";
+					 }
+				 triangle()
+					 {
+					  float s,p,ans;
+					  s=(A+B+C)/2;
+					  p=s*(s-A)*(s-B)*(s-C);
+					  ans=sqrt(p);
+					  cout<<"The Area Of Triangle ="<<ans<<"\n";
+					 }
+ };
+ main()
+ {
+
+  float radius1,length1,width1,A1,B1,C1;
+  cout<<"Enter The Radius of Circle =";
+  cin>>radius1;
+
+  cout<<"Enter The Length Of Rectangle =";
+  cin>>length1;
+  cout<<"Enter The Width Of Rectangle =";
+  cin>>width1;
+
+  cout<<"Enter The 1st Side Of Triangle =";
+  cin>>A1;
+  cout<<"Enter The 2nd Side Of Triangle =";
+  cin>>B1;
+  cout<<"Enter The 3rd Side Of Triangle =";
+  cin>>C1;
+
+  Area Ar(radius1),Ar1(length1, width1),Ar2(A1, B1, C1);
+	Ar.circle();
+	Ar1.rectangle();
+	Ar2.triangle();
+ getch();
+ }

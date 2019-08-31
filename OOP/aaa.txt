@@ -1,0 +1,41 @@
+#include<iostream.h>
+#include<conio.h>
+class rectangle
+{
+	private:
+		int l; 
+                             int w;
+	public:
+		void getdata(int,int);
+		void calculation();
+};
+main()
+{
+		clrscr();
+		rectangle r;
+		int l,w;
+		gotoxy(24,2);
+		cout<<"Enter The Length Of Rectangle \n";
+		gotoxy(40,3);
+		cin>>l;
+		gotoxy(24,4);
+		cout<<"Enter The Width Of Rectangle \n";
+		gotoxy(40,5);
+		cin>>w;
+		clrscr();
+		r.getdata(l,w);
+		r.calculation();
+		getch();
+}
+void rectangle::getdata(int a,int b)
+{
+		l=a;
+		w=b;
+}
+void rectangle::calculation()
+{
+		gotoxy(24,2);
+		cout<<"The Area Of Rectangle : "<<l*w<<"\n";
+		gotoxy(24,4);
+		cout<<"The Perimeter Of Rectangle : "<<2*(l+w)<<"\n";
+}

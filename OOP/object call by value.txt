@@ -1,0 +1,26 @@
+#include<iostream.h>
+#include<conio.h>
+class objpass
+{
+ public:
+ int a,b;
+ objpass (int a1,int b1)
+ {
+ a=a1, b=b1;
+ }
+ void math(objpass obj)
+ {
+ obj.a=(obj.a)*2;
+ obj.b=obj.b*2;
+ }
+ };
+ main()
+ {
+ objpass obj1(3,4);
+ objpass obj2(4,5);
+ cout<<"Before Function Calling:\n";
+ cout<<obj2.a<<obj2.b;
+ obj1.math(obj2);
+ cout<<"After Function Calling:\n"<<obj2.a<<obj2.b;
+ getch();
+ }

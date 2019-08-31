@@ -1,0 +1,24 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+int a,mo,w,d,h,mi,s;
+cout<<"Enter Your Age=";
+cin>>a;
+clrscr();
+mo=a*12;
+w=mo*52;
+d=w*365;
+h=d*24;
+mi=h*60;
+s=mi*60;
+cout<<"Your Age Is '"<<a<<"' Years"<<endl;
+cout<<"Your Age In Monthes="<<mo<<endl;
+cout<<"Your Age In Weeks="<<w<<endl;
+cout<<"Your Age In Days="<<d<<endl;
+cout<<"Your Age In Hours="<<h<<endl;
+cout<<"Your Age In Minuts="<<mi<<endl;
+cout<<"Your Age In Seconds="<<s<<endl;
+getch();
+}

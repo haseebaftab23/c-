@@ -1,0 +1,42 @@
+#include<iostream.h>
+#include<conio.h>
+class base
+	 {
+		protected:
+		  int a,b;
+		public:
+		  get()
+			  {
+				 cout<<"\nEnter the two values of base:\n";
+				 cin>>a>>b;
+			  }
+		  print()
+			  {
+				 cout<<a<<b<<"base";
+			  }
+
+	  };
+class derive:public base
+	  {
+		 private:
+			int m,n;
+		 public:
+       get()
+			  {
+				 cout<<"Enter the two values of derive:\n";
+				 cin>>m>>n;
+			  }
+			print()
+			  {
+				 cout<<m<<n<<"derive";
+			  }
+	  };
+main()
+{
+derive a;
+a.get();
+a.print();
+a.base::get();
+a.base::print();
+
+}

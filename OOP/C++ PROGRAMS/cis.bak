@@ -1,0 +1,17 @@
+#include <iostream.h>
+#include <conio.h>
+
+main()
+{
+clrscr();
+char ch;
+cout << "Enter your input : " << endl;
+cin>>ch;
+if(((ch>='A')&&(ch<='Z'))||((ch>='a')&&(ch<='z')))
+cout << "Your input " << ch << " is a character." << endl;
+else if((ch>='0')&&(ch<='9'))
+cout << "Your input " << ch << " is a digit." << endl;
+else
+cout << "Your input " << ch << " is a symbol." << endl;
+getch();
+}

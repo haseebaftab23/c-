@@ -1,0 +1,22 @@
+#include<iostream.h>
+#include<conio.h>
+class Cclass
+{
+	int a;
+	float b;
+	char c;
+	public:
+	Cclass(int a1, float b1, char c1):a(a1),b(b1),c(c1)
+	{		
+	}
+	void show() const
+	{
+		cout<<"a:"<<a<<"\nb:"<<b<<"\nc:"<<c;
+	}
+};
+main()
+{
+	Cclass obj(2,2.3,'G');
+	obj.show();
+	getch();
+}

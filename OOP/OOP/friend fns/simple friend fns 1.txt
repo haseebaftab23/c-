@@ -1,0 +1,25 @@
+#include<iostream.h>
+#include<conio.h>
+class abc
+{
+	int a,b;
+	public:                                 // FRIEND FUNCTION=>it is not a member function but it is a simple function
+	friend void xy(abc &, int, int);        // FRIEND fns can access the private data member
+    void print()                            // We write word "FRIEND" in start of member fns.
+    {
+		cout<<a<<" : "<<b<<endl;
+	}
+};
+int main()
+{
+	abc obj;
+	xy(obj,3,6);                             // Simple call of member function because of FRIEND function.
+	obj.print();
+	cout<<"OK";
+	return 0;
+}
+void xy(abc &c, int x, int y)                // Scope resulation operator is not used because it is not a member function. & Scope resulation operator use only for member functions.
+ {                                           // object comes at "C" due to address opetator "&"
+	c.a=x;                                   // We pass the object=> we can access the data members from "main()", directly.
+	c.b=y;
+}

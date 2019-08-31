@@ -1,0 +1,21 @@
+#include<iostream.h>
+#include<conio.h>
+swap(int &a,int &b)
+	{
+	  int c=0;
+	  c=a;
+	  a=b;
+	  b=c;
+	}
+main()
+	{
+	  int x,y;
+	  cout<<"Enter The 1st Value :\n";
+	  cin>>x;
+	  cout<<"\nEnter The 2nd Value :\n";
+	  cin>>y;
+	  cout<<"\nValues Before Swaping In Main:"<<x<<"  " <<y<<"\n\n";
+	  swap(x,y);
+	  cout<<"Values  After Swaping In Main:"<<x<<"  "<<y;
+	  getch();
+	}

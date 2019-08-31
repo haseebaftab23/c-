@@ -1,0 +1,29 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+clrscr();
+float fir;
+char op;
+float sec;
+cout<<"Enter first value=";
+cin>>fir;
+cout<<"Enter second value=";
+cin>>sec;
+cout<<"Select an option +,-,/,*,% = ";
+cin>>op;
+if (op=='+')
+cout<<"The value is="<<fir+sec;
+else
+if (op=='-')
+cout<<"The value is="<<fir-sec;
+else
+if (op=='*')
+cout<<"The value is="<<fir*sec;
+else
+if (op=='/')
+cout<<"The value is="<<fir/sec;
+else
+cout<<"Invalid";
+getch();
+}

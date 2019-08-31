@@ -1,0 +1,15 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+cout<<" This is a cappital  ' A '\n"<<endl;
+cout<<"              _____"<<endl;
+cout<<"             / ___ \\"<<endl;
+cout<<"            / /   \\ \\"<<endl;
+cout<<"           / /_____\\ \\"<<endl;
+cout<<"          /  _______  \\"<<endl;
+cout<<"         /  /       \\  \\"<<endl;
+cout<<"        /__/         \\__\\"<<endl;
+cout<<"\n\n A for ' APPLE '";
+getch();
+}

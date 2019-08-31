@@ -1,0 +1,23 @@
+#include<iostream.h>
+#include<conio.h>
+main()
+{
+float a,b,c,x,y,z,first,sec,thrd;
+cout<<"Enter 1st component of V = ";
+cin>>a;
+cout<<"Enter 2nd component of V = ";
+cin>>b;
+cout<<"Enter 3rd component of V = ";
+cin>>c;
+cout<<"Enter 1st component of U = ";
+cin>>x;
+cout<<"Enter 2nd component of U = ";
+cin>>y;
+cout<<"Enter 3rd component of U = ";
+cin>>z;
+first=b*z-y*c;
+sec=-(z*a-c*x);
+thrd=a*y-x*b;
+cout<<"V*U = "<<"< "<<first<<", "<<sec<<", "<<thrd<<", "<<">";
+getch();
+}

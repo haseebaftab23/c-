@@ -1,0 +1,33 @@
+#include<iostream.h>
+#include<conio.h>
+class Aclass
+{
+	//const int a=9 can't initialize a data member here
+	const int a;
+	int b;
+	public:
+	/*Aclass()
+	{constant member 'a' is not initialized in function Aclass::Aclass() can't modify a const  object in function Aclass::Aclass()
+	a=8;
+	} */
+	Aclass():a(8)
+	{
+		b=8;
+	}
+	void show() const 
+	{
+		cout<<"\nA :"<<a<<"\nB :"<<b;
+	}
+	void sum(const int x, const int y)const 
+	{
+		cout<<"\nSUM:"<<x+y;
+		//x++; can't modify
+	}
+};
+main()
+{
+	Aclass obj;
+	obj.show();
+	obj.sum(7,6);
+	getch();
+}

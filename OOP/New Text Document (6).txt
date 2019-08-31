@@ -1,0 +1,54 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+class rec
+{
+private:
+int l;
+int w;
+
+public:
+void getdata()
+{
+cout<<"Enter The Length Of Rectangle =";
+cin>>l;
+cout<<"Enter The Width Of Rectangle =";
+cin>>w;
+}
+void area()
+{
+int area=l*w;
+cout<<"The Area Of Rectangle ="<<area;
+int per=2*(l+w);
+cout<<"\n";
+cout<<"The Perameter Of Rectangle ="<<per;
+cout<<"\n";
+}
+void draw()
+{
+int i;
+for(i=1; i<=w; i++)
+cout<<"*";
+cout<<"\n";
+for(int j=1; j<=l; j++)
+{
+cout<<"*";
+cout<<setw(i-1);
+cout<<"*\n";
+}
+for(int k=1; k<=i-1; k++)
+cout<<"*";
+cout<<"\n";
+}
+};
+main()
+{
+rec r1,r2;
+r1.getdata();
+r1.area();
+r1.draw();
+r2.getdata();
+r2.area();
+r2.draw();
+getche();
+}

@@ -1,0 +1,37 @@
+//output strem
+#include<iostream.h>                            //IOS operation mode
+#include<conio.h>                                //1: istream     2: ostream    
+#include<fstream.h>                                // iostream
+#include<string>
+#include<stdlib.h>                                   //  types of stream
+using namespace std;                                //  input stream  file----->program
+class entercity                                    //  output stream  program------>file
+{
+	string city;
+	int city1;
+	float city2;
+	public:
+	void WrirtenInFile()
+	{
+		ofstream file("f:\\r\\city.txt");
+		if(!file)
+		{
+			cout<<"Error";
+			exit(1);
+		}		
+			cout<<"Enter City Name :\n";
+			cin>>city;
+			cout<<"Enter The City Code :\n";
+			cin>>city1;
+			cout<<"Enter The Floating Value :\n";
+			cin>>city2;
+			file<<city<<" "<<city1<<" "<<city2<<"\n";
+	}	
+};
+int main()
+{
+	entercity obj;
+	obj.WrirtenInFile();
+	return 0;
+    getch();
+}

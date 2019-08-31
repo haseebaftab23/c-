@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+class A 
+{
+	int m;
+	protected:
+	int n;
+	public:
+	void assign(int m1,int n1)
+	{
+		m=m1;
+		n=n1;
+	}
+	friend class B;
+};
+class B
+{
+	A obj2;
+	public:
+	float sum(A obj)
+	{
+		return(obj.m+obj.n);
+	}
+	void s()
+	{
+		A obj1;
+		A obj3;
+		obj1.m=10;
+		cout<<obj1.m<<"\n";
+		obj2.n=90;
+		cout<<obj2.n;
+		obj3.assign(4,5);
+		cout<<"\n "<<obj3.m<<":"<<obj3.n;
+	}
+
+};
+ main()
+{
+	A aa;
+	B bb;
+	aa.assign(2,3);
+	cout<<"sum of two values"<<bb.sum(aa);
+	bb.s();
+	
+}

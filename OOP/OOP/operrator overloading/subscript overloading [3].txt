@@ -1,0 +1,45 @@
+#include<iostream.h>
+#include<conio.h>
+const int limit=10;
+class safearray
+{
+	int arr[limit];
+	public:
+	int& operator[](int n)            //address operator use=> for initialize the index of array, and return the addressed array to object in main()
+	{
+		if(n<0 || n>=limit)
+		{
+			cout<<"Index Is Out Of Bound";
+	    	exit(1);			
+		}
+	    else
+     	{
+	    	return arr[n];
+	    }
+	}
+	int operator[](int n)const               // for right side using of object in main() 
+	{
+		if(n<0 || n>=limit)
+		{
+			cout<<"Index Is Out Of Bound";
+			exit(1);
+		}
+		else
+		{
+			return arr[n];
+		}
+	}	
+};
+main()
+{
+	safearray s;
+	for(int i=0; i<limit; i++)            // set the values in array by reference/address
+     	s[i]=i*10;
+	for(int j=0; j<limit; j++)
+	{
+		int temp;
+		temp=s[j];
+		cout<<"Element "<<j<<" Is "<<temp<<endl;
+	}
+getch();
+}
